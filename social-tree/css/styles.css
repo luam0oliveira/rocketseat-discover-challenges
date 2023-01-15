@@ -1,0 +1,75 @@
+:root {
+  --body-bg-color: #FAF7FD;
+  --purple: #BB99DD;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--body-bg-color);
+}
+
+#content{
+  width: 100%;
+  margin: 0 auto;
+  max-width: 23rem;
+  padding: 2rem 2rem;
+}
+
+.img-container{
+  overflow: hidden;
+  border-radius: 100%;
+  border: 2px var(--purple) solid;
+  padding: 0.5rem;
+  max-width: 14rem;
+  margin: 0 auto 15px;
+}
+
+.img-container img {
+  border-radius: 100%;
+  width: 100%;
+  display: block;
+}
+
+.instagram-username{
+  text-align: center;
+  font-weight: 300;
+  color: var(--purple);
+  margin-bottom: 2.25rem;
+}
+
+.link-list {
+  margin-bottom: 4.25rem;
+}
+
+.link-list li {
+  display: block;
+  padding: 0.5rem 0;
+  border: 2px var(--purple) solid;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.link-list li a {
+  color: var(--purple);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#social-media-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#social-media-container img{
+  width: 22px;
+}
