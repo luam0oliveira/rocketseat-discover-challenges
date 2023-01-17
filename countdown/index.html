@@ -11,9 +11,45 @@
       href="https://static.vecteezy.com/system/resources/previews/001/976/963/non_2x/mountain-with-flag-illustration-icon-isolated-on-white-background-free-vector.jpg"
       type="image/x-icon"
     />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <main id="content">
+      <div class="information-container">
+        <h1 class="title">Ready to launch in...</h1>
+        <div id="counter-container">
+          <div class="counter-title-container">
+            <p class="days-title">Dias</p>
+            <p class="hours-title">Horas</p>
+            <p class="minutes-title">Minutos</p>
+            <p class="seconds-title">Segundos</p>
+          </div>
+          <div class="counter-number-container">
+            <p id="days-number">00</p>
+            <p>:</p>
+            <p id="hours-number">00</p>
+            <p>:</p>
+            <p id="minutes-number">00</p>
+            <p>:</p>
+            <p id="seconds-number">00</p>
+          </div>
+        </div>
+        <p class="subtitle">Inscreva-se para saber mais sobre o lançamento</p>
+        <button class="subscribe-button">Inscreva-se</button>
+      </div>
+      <div class="img-container">
+        <img src="assets/rocket.svg" alt="" />
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
 </html>
