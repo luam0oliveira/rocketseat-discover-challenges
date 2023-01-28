@@ -14,13 +14,92 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    Hello world
+  <body class="active">
+    <header>
+      <div class="logo-toggle-menu-container">
+        <img class="logo on-active" src="assets/logo.svg" alt="Logo" />
+        <img
+          id="toggle-menu"
+          class="icon"
+          src="assets/menu.svg"
+          alt="Menu icon"
+        />
+      </div>
+      <div class="search-container">
+        <img class="icon" src="assets/search.svg" alt="Search icon" />
+        <input
+          class="on-active"
+          type="text"
+          name="input"
+          placeholder="Buscar"
+        />
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a href="#"
+              ><img class="icon" src="assets/grid.svg" alt="Grid icon" />
+              <p class="on-active">Dashboard</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img class="icon" src="assets/pet.svg" alt="Pet icon" />
+              <p class="on-active">Pets</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img class="icon" src="assets/user.svg" alt="User icon" />
+              <p class="on-active">Clientes</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img class="icon" src="assets/vet.svg" alt="Vet icon" />
+              <p class="on-active">Vets</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="icon"
+                src="assets/settings.svg"
+                alt="Settings icon"
+              />
+              <p class="on-active">Ajustes</p></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>Dashboard</main>
+    <footer>
+      <div class="logout">
+        <div class="user-container on-active">
+          <div class="user-profile-picture">
+            <img src="assets/photo.jpg" alt="Picture of Eleanor Pena" />
+          </div>
+          <div class="user-information">
+            <p class="name">Eleanor Pena</p>
+            <p class="ocupation">Veterinária</p>
+          </div>
+        </div>
+        <img
+          class="icon logout-button"
+          src="assets/log-out.svg"
+          alt="Logout icon"
+        />
+      </div>
+    </footer>
     <script src="js/index.js"></script>
   </body>
 </html>
