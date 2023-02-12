@@ -25,12 +25,14 @@ body {
     "logout content";
   height: 100vh;
   overflow: hidden;
+  transition: all 0.5s;
 }
 
 header {
   grid-area: menu;
   background-color: var(--green);
   padding: 14px;
+  overflow-x: hidden;
 }
 
 .logo-toggle-menu-container {
@@ -43,6 +45,7 @@ header {
 
 .logo {
   width: 4rem;
+  display: none;
 }
 
 .icon {
@@ -52,6 +55,7 @@ header {
 .search-container {
   display: flex;
   padding: 14px;
+  justify-content: center;
   background: var(--light-green);
   border-radius: 12px;
   margin-bottom: 1.25rem;
@@ -64,6 +68,7 @@ header {
   font-size: 15px;
   color: var(--text-color);
   width: 100%;
+  display: none;
 }
 
 .search-container input::placeholder {
@@ -79,14 +84,17 @@ header {
 .nav-menu li a {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   color: var(--text-color);
   text-decoration: none;
   padding: 14px;
   font-family: "Poppins", sans-serif;
-  gap: 14px;
   border-radius: 12px;
   transition: background 200ms;
+}
+
+.nav-menu li a p {
+  display: none;
 }
 
 .nav-menu li a:hover {
@@ -115,9 +123,12 @@ footer {
 }
 
 .user-container {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 10px;
+  opacity: 0;
+  transition-property: display;
+  transition-delay: 1s;
 }
 
 .user-profile-picture {
@@ -139,16 +150,16 @@ footer {
   font-size: 12px;
 }
 
-.on-active {
-  display: none;
-}
-
 .active .on-active {
   display: block;
+  opacity: 1;
 }
 
 .active .on-active.user-container {
+  opacity: 1;
   display: flex;
+  transition-property: display;
+  transition-delay: 1s;
 }
 
 .active {
@@ -163,10 +174,21 @@ footer {
   gap: 14px;
 }
 
+.active .nav-menu li a {
+  justify-content: start;
+  gap: 14px;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
 footer {
   padding: 0 14px;
 }
 
 .active .logout {
   justify-content: space-between;
+}
+
+.active {
+  transition: all 0.5s;
 }
