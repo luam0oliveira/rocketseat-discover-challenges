@@ -1,0 +1,60 @@
+:root {
+  /* Utility units */
+  --width: 60px;
+  --padding: 0.3rem;
+  --transtion-duration: 0.4s;
+
+  /* Colors */
+  --dark: #292c35;
+  --light: #f1f1f1;
+  --label: #111;
+}
+body {
+  background-color: var(--light);
+  transition: background-color var(--transtion-duration);
+}
+
+body.dark-mode {
+  background-color: var(--dark);
+}
+
+#content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#switcher-container {
+  display: flex;
+  gap: 1rem;
+  width: min-content;
+  background-color: var(--label);
+  position: relative;
+  padding: var(--padding);
+  border-radius: var(--width);
+  cursor: pointer;
+}
+
+#switcher-container::after {
+  content: "";
+  display: block;
+  top: var(--padding);
+  left: var(--padding);
+  z-index: 3;
+  position: absolute;
+  width: var(--width);
+  height: var(--width);
+  border-radius: 100px;
+  background-color: var(--light);
+  transition: top var(--transtion-duration) ease-in-out,
+    left var(--transtion-duration) ease-in-out;
+}
+
+.dark-mode #switcher-container::after {
+  left: calc(calc(100% - var(--width)) - var(--padding));
+}
+
+#switcher-container img {
+  width: var(--width);
+}
